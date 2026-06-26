@@ -41,15 +41,18 @@ The backend handles secure authentication and interview report management, while
 ## 📂 Repository Structure
 
 * `📁 src/` - Core backend server code
-* `📄 src/app.js` - Express app setup
-* `📄 src/server.js` - Backend entry point
-* `⚙️ src/config/database.js` - MongoDB connection
-* `🛣️ src/routes/` - Auth and interview API routes
-* `🎮 src/controllers/` - Request handlers
-* `🛡️ src/middlewares/` - Auth and file upload handling
-* `🗄️ src/models/` - MongoDB schemas
-* `🤖 src/services/` - AI report generation service
+* `📄 app.js` - Express app setup
+* `📄 server.js` - Backend entry point
+* `⚙️ config/database.js` - MongoDB connection
+* `🛣️ routes/` - Auth and interview API routes
+* `🎮 controllers/` - Request handlers
+* `🛡️ middlewares/` - Auth and file upload handling
+* `🗄️ models/` - MongoDB schemas
+* `🤖 services/` - AI report generation service
+
+
 * `💻 Frontend/` - React frontend application
+* `📄 .env.example` - Template for environment variables
 
 ---
 
@@ -83,7 +86,19 @@ npm install
 
 ### 🔑 Environment Variables
 
-Create a `.env` file at the project root 
+For security, we use an example file. **Never commit your real `.env` file to version control.**
+
+1. Create a copy of the `.env.example` file in the project root and rename it to `.env`.
+2. Replace the placeholder values with your actual credentials:
+
+```env
+# .env
+MONGO_URI=your_mongodb_connection_string_here
+JWT_SECRET=your_jwt_secret_here
+GROQ_API_KEY=your_groq_api_key_here
+USE_MOCK_DATA=false
+
+```
 
 ### 🏃‍♂️ Run the Backend
 
