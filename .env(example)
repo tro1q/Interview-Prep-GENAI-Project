@@ -1,0 +1,5 @@
+# .env.example
+MONGO_URI=insert_your_mongodb_uri_here
+JWT_SECRET=insert_your_secret_here
+GROQ_API_KEY=insert_your_api_key_here
+USE_MOCK_DATA=false
